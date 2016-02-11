@@ -1,0 +1,724 @@
+@import "bourbon/bourbon";
+@import url(https://fonts.googleapis.com/css?family=Lusitana|Raleway:400,700,200);
+
+$red: #FF6766;
+$gray: #60646D;
+$white: #FFFFF7;
+$blue: #83D6DE;
+$green: #97CE68;
+$mainColor: $blue;
+$bodyFont: 'Lusitana', 'Times New Roman', Times, Baskerville, Georgia, serif;
+$mainFont: 'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+.background-red {
+  background-color: $red;
+}
+
+.background-gray {
+  background-color: darken($gray, 20%);
+}
+
+.background-blue {
+  background-color: $blue;
+}
+
+.background-green {
+  background-color: $green;
+}
+
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+html {
+  font-family: $bodyFont;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%
+}
+
+body {
+  margin: 0
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block
+}
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0
+}
+
+[hidden],
+template {
+  display: none
+}
+
+a {
+  background-color: transparent
+}
+
+a:active,
+a:hover {
+  outline: 0
+}
+
+abbr[title] {
+  border-bottom: 1px dotted
+}
+
+b,
+strong {
+  font-weight: bold
+}
+
+dfn {
+  font-style: italic
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0
+}
+
+mark {
+  background: #ff0;
+  color: #000
+}
+
+small {
+  font-size: 80%
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline
+}
+
+sup {
+  top: -0.5em
+}
+
+sub {
+  bottom: -0.25em
+}
+
+img {
+  border: 0
+}
+
+svg:not(:root) {
+  overflow: hidden
+}
+
+figure {
+  margin: 1em 40px
+}
+
+hr {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0
+}
+
+pre {
+  overflow: auto
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0
+}
+
+button {
+  overflow: visible
+}
+
+button,
+select {
+  text-transform: none
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: default
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0
+}
+
+input {
+  line-height: normal
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em
+}
+
+legend {
+  border: 0;
+  padding: 0
+}
+
+textarea {
+  overflow: auto
+}
+
+optgroup {
+  font-weight: bold
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+td,
+th {
+  padding: 0
+}
+
+
+/*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important
+  }
+  a,
+  a:visited {
+    text-decoration: underline
+  }
+  a[href]:after {
+    content: " (" attr(href) ")"
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")"
+  }
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: ""
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid
+  }
+  thead {
+    display: table-header-group
+  }
+  tr,
+  img {
+    page-break-inside: avoid
+  }
+  img {
+    max-width: 100% !important
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3
+  }
+  h2,
+  h3 {
+    page-break-after: avoid
+  }
+  .navbar {
+    display: none
+  }
+  .btn>.caret,
+  .dropup>.btn>.caret {
+    border-top-color: #000 !important
+  }
+  .label {
+    border: 1px solid #000
+  }
+  .table {
+    border-collapse: collapse !important
+  }
+  .table td,
+  .table th {
+    background-color: #fff !important
+  }
+  .table-bordered th,
+  .table-bordered td {
+    border: 1px solid #ddd !important
+  }
+}
+
+//
+// Custom Classes & Bootstrap Overrides
+//
+
+body {
+  font-family: $bodyFont;
+  font-size: 18px;
+  line-height: 1.5;
+  color: $gray;
+  background-color: $white
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: $mainFont;
+  font-weight: 400;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: darken($mainColor, 10%);
+}
+
+a {
+  color: $mainColor;
+  text-decoration: none
+}
+
+a:hover,
+a:focus {
+  color: $mainColor;
+  text-decoration: underline
+}
+
+a:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px
+}
+
+h1,
+.h1 {
+  font-size: 24px
+}
+
+h2,
+.h2 {
+  font-size: 20px
+}
+
+h3,
+.h3 {
+  font-size: 20px
+}
+
+h4,
+.h4 {
+  font-size: 16px
+}
+
+h5,
+.h5 {
+  font-size: 12px
+}
+
+h6,
+.h6 {
+  font-size: 8px
+}
+
+p {
+  margin: 0
+}
+
+.navbar-fixed-top .navbar-brand {
+  padding: 15px;
+}
+
+.navbar-fixed-top .navbar-brand img {
+  height: 45px;
+  margin-top: -10px
+}
+
+@media(min-width:768px) {
+  .navbar-fixed-top .navbar-brand {
+    padding: 15px 0;
+  }
+}
+
+.navbar-brand .avitar-text {
+  margin-top: -32px;
+  margin-left: 50px;
+  width: 180px;
+}
+
+.theme-showcase img,
+.theme-showcase video {
+  max-width: 100%;
+}
+
+.mainImage {
+  @include display(flex );
+  @include align-items(center);
+  @include justify-content(center);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: darken($mainColor, 10%);
+  height: 350px;
+  background-position: center center;
+}
+
+@media (min-width: 995px) {
+  .mainImage {
+    background-repeat: no-repeat;
+    background-position: 0;
+    background-attachment: fixed;
+    background-color: darken($mainColor, 10%);
+    height: 350px
+  }
+}
+
+a.fixed-mobile-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #e74c3c
+}
+
+a.fixed-mobile-footer:hover {
+  text-decoration: none;
+  background-color: #d62c1a
+}
+
+a.fixed-mobile-footer h4 {
+  color: $white;
+}
+
+.fa {
+  color: darken($gray, 20%);
+  background: $blue;
+  padding: 15px;
+  border-radius: 5px;
+  width: 50px;
+  text-align: center;
+  margin: 0 5px;
+
+  .contact & {
+    margin: 5px 10px;
+  }
+}
+
+.flex-container {
+  @include display(flex);
+  @include align-items(center);
+  @include flex-direction(column);
+  @include justify-content(space-between);
+  @media(min-width: 768px) {
+    @include flex-direction(row);
+    div {
+      &:first-child {
+        width: 40%;
+      }
+      &:last-child {
+        width: 59%;
+        margin-left: 25px;
+      }
+    }
+  }
+}
+
+.extras {
+  @include display(flex);
+  @include flex-direction(column);
+  margin-bottom: 50px;
+  div {
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+  }
+  @media(min-width:768px) {
+    @include flex-direction(row);
+    div {
+      width: 32%;
+      margin: 1%;
+      &:nth-of-type(3n) {
+        margin-right: 0;
+      }
+      &:nth-of-type(3n+1) {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.folio {
+  padding: 50px 0;
+  &-light {
+    color: $white;
+    h2 a {
+      color: darken($gray, 20%);
+    }
+  }
+}
+
+.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 10px 15px;
+  font-size: 15px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: $mainFont;
+  font-weight: 400;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.nav {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-family: $mainFont;
+}
+
+.text-light {
+  color: $white
+}
+
+.text-heading {
+  letter-spacing: 5px;
+  line-height: 46px;
+  font-size: 32px;
+  font-weight: 200;
+  &-spacing {
+    padding: 50px 0;
+    font-size: 26px;
+  }
+}
+
+.copy {
+  margin: 50px 0;
+  font-size: 22px;
+  footer & {
+    margin: 0;
+    padding: 50px 0;
+  }
+  &-date {
+    margin-top: 50px;
+  }
+
+  .contact & {
+    font-size: 18px;
+  }
+}
+
+.content-padding {
+  margin: 50px auto
+}
+
+.navbar {
+  border-width: 0;
+  @include transition(all, 0.2s, ease);
+}
+
+.navbar-collapse {
+  background-color: darken($blue, 50%);
+  padding-bottom: 10px;
+  @media(min-width: 768px) {
+    background-color: transparent;
+  }
+}
+
+.navbar-inverse {
+  background-color: transparent;
+  border-color: transparent
+}
+
+.navbar-inverse .navbar-brand {
+  color: $white
+}
+
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus {
+  color: #444;
+  background-color: transparent
+}
+
+.navbar-inverse .navbar-text {
+  color: $mainColor
+}
+
+.navbar-inverse .navbar-nav>li>a {
+  color: $white
+}
+
+.navbar-inverse .navbar-nav>li>a:hover,
+.navbar-inverse .navbar-nav>li>a:focus {
+  color: $mainColor
+}
+
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.active>a:hover,
+.navbar-inverse .navbar-nav>.active>a:focus {
+  color: $white;
+  background-color: darken($mainColor, 10%)
+}
+
+.navbar-inverse .navbar-nav>.disabled>a,
+.navbar-inverse .navbar-nav>.disabled>a:hover,
+.navbar-inverse .navbar-nav>.disabled>a:focus {
+  color: #cccccc;
+  background-color: transparent
+}
+
+.navbar-inverse .navbar-toggle {
+  border-color: transparent;
+}
+
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+  background-color: transparent;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: $white
+}
+
+.navbar-inverse .navbar-toggle:hover .icon-bar,
+.navbar-inverse .navbar-toggle:focus .icon-bar {
+  background-color: $mainColor
+}
+
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
+  border-color: darken($blue, 50%)
+}
+
+.navbar-inverse .navbar-nav>.open>a,
+.navbar-inverse .navbar-nav>.open>a:hover,
+.navbar-inverse .navbar-nav>.open>a:focus {
+  background-color: darken($mainColor, 10%);
+  color: $white
+}
+
+.navbar-dark {
+  background: darken($blue, 50%);
+}
+
+.navbar-brand {
+  float: left;
+  padding: 19.5px 15px;
+  font-size: 19px;
+  line-height: 21px;
+  height: 60px
+}
+
+.navbar-toggle {
+  position: relative;
+  float: right;
+  margin-right: 15px;
+  padding: 9px 10px;
+  margin-top: 13px;
+  margin-bottom: 13px;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px
+}
+
+@media (min-width:768px) {
+  .navbar-nav {
+    float: left;
+    margin: 0
+  }
+  .navbar-nav>li {
+    float: left
+  }
+  .navbar-nav>li>a {
+    padding-top: 20px;
+  }
+}

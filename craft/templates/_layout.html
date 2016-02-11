@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{meta}}">
+    <title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{{ siteUrl }}/assets/css/bootstrap.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="{{ siteUrl }}/assets/css/theme.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    {% include "_includes/_analyticstracking" %}
+    {% include "_includes/_navbar-fixed-top" %}
+    <div style="background-image: url({{ siteUrl }}/assets/images/main-hero.jpg)" class="mainImage">
+      <h1 class="text-heading text-light text-center">development. design. passion. craft.</h1>
+    </div>
+
+    {% block content %}
+      <p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
+      <p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
+    {% endblock %}
+
+    {% include "_includes/_footer" %}
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{{ siteUrl }}/assets/js/bootstrap.min.js"></script>
+    <script> var year = new Date().getFullYear(), $menu = $( '.navbar' ), menuHeight = $menu.height(), pagePosition = $( '.theme-showcase' ).offset().top; $( '.copy-date span' ).text( year ); $( window ).scroll( function() {var currentPosition = $( this ).scrollTop(); if ( currentPosition >= pagePosition - menuHeight ) {$menu.addClass( 'navbar-dark' ); } else {$menu.removeClass( 'navbar-dark' ); } } ); $menu.find( 'a' ).click( function() {var $href = $( this ).attr( 'href' ), $anchor = $( $href ).offset(); if ( $( window ).width() < 768 ) {$( '.navbar-toggle' ).click(); } $( 'html, body' ).animate( {scrollTop: $anchor.top - 70 }, {duration: 900, easing: 'easeInOutCirc'} ); return false; } );</script>
+  </body>
+</html>
